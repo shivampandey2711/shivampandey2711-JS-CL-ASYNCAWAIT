@@ -28,11 +28,12 @@ button.addEventListener("click", countdown);
  * 
  * TODO: add async & await to this function, then verify that the page is able to display "Success!"
  */
-function countdown() {
-    let value = getPromise();
+async function countdown() {
+    // Wait for the promise to resolve and store the result in 'value'
+    let value = await getPromise();
+    // Display the resolved value on the page
     text.innerText = value;
 }
-
 
 
 /**
